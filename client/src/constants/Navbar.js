@@ -9,7 +9,7 @@ export const navLinks = [
 	},
 	{
 		label: "products",
-		link: "/products",
+		link: "/products/:id",
 	},
 	{
 		label: "services",
