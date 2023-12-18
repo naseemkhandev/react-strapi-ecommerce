@@ -7,25 +7,11 @@ import { HiBuildingStorefront } from "react-icons/hi2";
 
 import { footerLinks1 } from "../constants/footer";
 import { discover, mastercard, paypal, stripe, visa } from "../assets";
-
-const SocialIcon = ({ link, icon }) => {
-	const Icon = icon;
-
-	return (
-		<Link
-			to={link}
-			target="_blank"
-			rel="noreferrer"
-			className="text-xl border p-2 rounded-full cursor-pointer hover:bg-neutral-50 hover:text-primary hover:border-primary"
-		>
-			<Icon />
-		</Link>
-	);
-};
+import SocialIcons from "./common/SocialIcons";
 
 const Footer = () => {
 	return (
-		<div className="w-full">
+		<div className="w-full mt-10">
 			<div className="container mx-auto px-5 md:px-10 py-10">
 				<div className="grid md:grid-cols-2 lg:grid-cols-3 gap-x-10 gap-y-12">
 					<div className="flex flex-col gap-5 flex-1 w-full">
@@ -44,16 +30,19 @@ const Footer = () => {
 							Voluptates rerum id numquam, sequi totam sunt consectetur.
 						</p>
 						<div className="flex items-center gap-2">
-							<SocialIcon
+							<SocialIcons
 								link="https://github.com/NaseemKhan005"
 								icon={FaGithub}
 							/>
-							<SocialIcon
+							<SocialIcons
 								link="https://www.linkedin.com/in/naseemkhann"
 								icon={FaLinkedin}
 							/>
-							<SocialIcon link="https://naseemkhan.vercel.app" icon={GiWorld} />
-							<SocialIcon link="tel:+92 3444170400" icon={FaWhatsapp} />
+							<SocialIcons
+								link="https://naseemkhan.vercel.app"
+								icon={GiWorld}
+							/>
+							<SocialIcons link="tel:+92 3444170400" icon={FaWhatsapp} />
 						</div>
 					</div>
 
@@ -66,8 +55,6 @@ const Footer = () => {
 								<Link
 									key={link.id}
 									to={link.link}
-									target="_blank"
-									rel="noreferrer"
 									className="hover:underline hover:text-black/60"
 								>
 									{link.title}
@@ -82,8 +69,6 @@ const Footer = () => {
 								<Link
 									key={link.id}
 									to={link.link}
-									target="_blank"
-									rel="noreferrer"
 									className="hover:underline hover:text-black/60"
 								>
 									{link.title}

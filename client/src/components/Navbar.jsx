@@ -15,7 +15,7 @@ const Navbar = () => {
 	const { pathname } = useLocation();
 
 	return (
-		<div className="border-b mb-8">
+		<div className="border-b fixed top-0 left-0 w-full z-10 bg-white/50 backdrop-blur-lg">
 			<div className="flex items-center justify-between container py-3 px-5 md:px-10 mx-auto">
 				<Link
 					to="/"
@@ -28,7 +28,7 @@ const Navbar = () => {
 				</Link>
 				<nav>
 					<ul
-						className={`flex px-5 md:px-0 md:items-center gap-5 md:gap-3 lg:gap-5 md:relative fixed top-0 w-full sm:w-80 h-screen md:shadow-none md:bg-transparent flex-col md:flex-row pt-28 md:pt-0 md:w-fit md:h-auto bg-white z-[100] md:z-auto transition-all duration-500 ${
+						className={`flex px-5 md:px-0 md:items-center gap-5 md:gap-1 lg:gap-5 md:relative fixed top-0 w-full sm:w-80 h-screen md:shadow-none md:bg-transparent flex-col md:flex-row pt-28 md:pt-0 md:w-fit md:h-auto bg-white z-[100] md:z-auto transition-all duration-500 ${
 							menu ? "left-0 shadow-xl" : "-left-full md:left-0"
 						}`}
 					>
@@ -63,7 +63,7 @@ const Navbar = () => {
 							pathname === "/cart" && "bg-primary/10"
 						}`}
 					>
-						<span className="absolute -top-1 -right-0.5 bg-secondary text-white w-[1.3rem] aspect-square text-xs font-medium flex items-center justify-center rounded-full">
+						<span className="absolute -top-1 -right-0.5 bg-primary text-white w-[1.3rem] aspect-square text-xs font-medium flex items-center justify-center rounded-full">
 							5
 						</span>
 						<MdOutlineShoppingCart />
